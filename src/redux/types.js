@@ -1,0 +1,11 @@
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+export const CREATE_CLIENT = 'CREATE_CLIENT';
+export const GET_CLIENTS = 'GET_CLIENTS';
+export const GET_CLIENT_INFO = 'GET_CLIENT_INFO';
+export const UPDATE_CLIENT = 'UPDATE_CLIENT';
+export const insertClientToArray = 'insertClientToArray';
+export const ADD_JOB = 'ADD_JOB';
+export const EDIT_JOB = 'EDIT_JOB';
+export const DELETE_CLIENT = 'DELETE_CLIENT';
+export const DELETE_JOB = 'DELETE_JOB';

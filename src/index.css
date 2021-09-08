@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Rubik', sans-serif; 
+}
+
+.page {
+  margin-top: 55px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.login-page {
+  height: 100vh;
+  min-height: 350px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  background-color: rgb(122, 122, 122);
+  box-shadow: 0 0 6px -2px black;
+  height: 55px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+.ham-menu {
+  display: flex;
+  margin-right: 5px;
+}
+
+.ham-menu:hover {
+  cursor: pointer;
+}
+
+.ham-menu * {
+  font-size: 2.7rem;
+}
+
+.menu {
+  background-color: white;
+  box-shadow: 0 0 6px -2px black;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.menu-header {
+  background-color: rgb(122, 122, 122);
+  box-shadow: 0 0 6px -2px black;
+  height: 55px;
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.close-menu {
+  display: flex;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.close-menu * {
+  font-size: 2.3rem;
+}
+
+.menu-links * {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link {
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.link:hover {
+  background-color: rgb(219, 219, 219);
+  cursor: pointer;
+}
+
+.add-client {
+  font-size: 2.3rem;
+  margin-right: 10px;
+  overflow: hidden;
+  color: rgb(45, 211, 45);
+}
+
+.add-client:hover {
+  cursor: pointer;
+}
+
+.new-client-form {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.new-client-form form {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 6px -2px black;
+  border-radius: 5px;
+  padding: 40px;
+  position: relative;
+}
+
+.new-client-form form * {
+  font-size: 1.4rem;
+}
+
+.form-input {
+  margin-bottom: 5px;
+}
+
+.form-input input {
+  font-size: 1.4rem;
+}
+
+.btn-create-client {
+  padding: 8px;
+  background-color: rgb(69, 185, 69);
+}
+
+.close-form {
+  position: absolute;
+  left: 7px;
+  top: 0;
+  cursor: pointer;
+}
+
+.close-form * {
+  font-size: 2rem !important;
+}
+
+.clients-page {
+  text-align: center;
+}
+
+.client-container {
+  width: 90%;
+  margin: 10px auto;
+  background-color: rgb(226, 226, 226);
+  text-align: right;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.client-info {
+  display: flex;
+
+}
+
+@media (max-width: 900px) {
+  .client-container {
+    flex-direction: column;
+  }
+
+  .client-info {
+    flex-direction: column;
+
+  }
+
+  .btn-more-details {
+    margin-top: 10px;
+    font-size: 1.5rem !important;
+    padding: 5px;
+  }
+}
+
+.client-container h3 {
+  margin-left: 10px;
+}
+
+.client-container h3 span {
+  font-weight: 400;
+}
+
+.btn-more-details {
+  font-size: 1.2rem;
+  background-color: rgb(69, 185, 69);
+}
+
+.btn-login {
+  font-size: 1.2rem;
+  height: 35px;
+  background-color: darkgray;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.symbol * {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.job-container {
+  margin-bottom: 10px;
+}
