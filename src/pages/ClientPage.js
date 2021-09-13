@@ -54,7 +54,7 @@ function ClientPage({ setNewClientForm, setClientId }) {
 
          <div className="vehicle-info client-container">
 
-            {client?.vehicleInfo.length === 0 ? 
+            {!client?.vehicleInfo ? 
                (
                   <div>
                      <h3>לא נמצאו פרטי רכב</h3>
