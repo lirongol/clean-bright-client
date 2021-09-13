@@ -53,18 +53,30 @@ function ClientPage({ setNewClientForm, setClientId }) {
          <h1 className="align-center">פרטי רכב</h1>
 
          <div className="vehicle-info client-container">
-            {client?.vehicleInfo?.tozeret_nm && <h3>יצרן: <span>{client.vehicleInfo.tozeret_nm}</span></h3>}
-            {client?.vehicleInfo?.kinuy_mishari && <h3>דגם: <span>{client.vehicleInfo.kinuy_mishari}</span></h3>}
-            {client?.vehicleInfo?.ramat_gimur && <h3>רמת גימור: <span>{client.vehicleInfo.ramat_gimur}</span></h3>}
-            {client?.vehicleInfo?.shnat_yitzur && <h3>שנת ייצור: <span>{client.vehicleInfo.shnat_yitzur}</span></h3>}
-            {client?.vehicleInfo?.tzeva_rechev && <h3>צבע רכב: <span>{client.vehicleInfo.tzeva_rechev}</span></h3>}
-            {client?.vehicleInfo?.degem_manoa && <h3>דגם מנוע: <span>{client.vehicleInfo.degem_manoa}</span></h3>}
-            {client?.vehicleInfo?.baalut && <h3>בעלות: <span>{client.vehicleInfo.baalut}</span></h3>}
-            {client?.vehicleInfo?.zmig_kidmi && <h3>צמיג קדמי: <span>{client.vehicleInfo.zmig_kidmi}</span></h3>}
-            {client?.vehicleInfo?.zmig_ahori && <h3>צמיג אחורי: <span>{client.vehicleInfo.zmig_ahori}</span></h3>}
-            {client?.vehicleInfo?.mivchan_acharon_dt && <h3>טסט אחרון: <span>{getDate(client.vehicleInfo.mivchan_acharon_dt)}</span></h3>}
-            {client?.vehicleInfo?.tokef_dt && <h3>תוקף טסט: <span>{getDate(client.vehicleInfo.tokef_dt)}</span></h3>}
-            {client?.vehicleInfo?.misgeret && <h3>שילדה: <span>{client.vehicleInfo.misgeret}</span></h3>}
+
+            {client?.vehicleInfo.length === 0 ? 
+               (
+                  <div>
+                     <h3>לא נמצאו פרטי רכב</h3>
+                  </div>
+               ) : (
+                  <div>
+                     {client?.vehicleInfo?.tozeret_nm && <h3>יצרן: <span>{client.vehicleInfo.tozeret_nm}</span></h3>}
+                     {client?.vehicleInfo?.kinuy_mishari && <h3>דגם: <span>{client.vehicleInfo.kinuy_mishari}</span></h3>}
+                     {client?.vehicleInfo?.ramat_gimur && <h3>רמת גימור: <span>{client.vehicleInfo.ramat_gimur}</span></h3>}
+                     {client?.vehicleInfo?.shnat_yitzur && <h3>שנת ייצור: <span>{client.vehicleInfo.shnat_yitzur}</span></h3>}
+                     {client?.vehicleInfo?.tzeva_rechev && <h3>צבע רכב: <span>{client.vehicleInfo.tzeva_rechev}</span></h3>}
+                     {client?.vehicleInfo?.degem_manoa && <h3>דגם מנוע: <span>{client.vehicleInfo.degem_manoa}</span></h3>}
+                     {client?.vehicleInfo?.baalut && <h3>בעלות: <span>{client.vehicleInfo.baalut}</span></h3>}
+                     {client?.vehicleInfo?.zmig_kidmi && <h3>צמיג קדמי: <span>{client.vehicleInfo.zmig_kidmi}</span></h3>}
+                     {client?.vehicleInfo?.zmig_ahori && <h3>צמיג אחורי: <span>{client.vehicleInfo.zmig_ahori}</span></h3>}
+                     {client?.vehicleInfo?.mivchan_acharon_dt && <h3>טסט אחרון: <span>{getDate(client.vehicleInfo.mivchan_acharon_dt)}</span></h3>}
+                     {client?.vehicleInfo?.tokef_dt && <h3>תוקף טסט: <span>{getDate(client.vehicleInfo.tokef_dt)}</span></h3>}
+                     {client?.vehicleInfo?.misgeret && <h3>שילדה: <span>{client.vehicleInfo.misgeret}</span></h3>}
+                  </div>
+               )
+            }
+
          </div>
 
          <h1 className="align-center">עבודות</h1>
