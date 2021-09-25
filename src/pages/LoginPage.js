@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { login } from '../redux/actions/login';
 
@@ -7,6 +7,8 @@ function LoginPage() {
    document.title = 'Clean & Bright | כניסה';
    const dispatch = useDispatch();
    const history = useHistory();
+
+   const errors = useSelector(state => state.errorReducer);
 
    const [loginData, setLoginData] = useState({ username: '', password: '' });
 
@@ -17,6 +19,11 @@ function LoginPage() {
 
    return (
       <div className='login-page d-flex-center'>
+
+            {errors.incorrectLoginMsg && <div className="login-error bar error">
+               <p>{errors.incorrectLoginMsg}</p>
+            </div>}
+         
          <form onSubmit={handleLogin}>
 
             <div className="form-input">
